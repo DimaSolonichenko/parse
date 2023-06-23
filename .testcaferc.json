@@ -1,3 +1,4 @@
 {
-    "selectorTimeout": 3000
+    "selectorTimeout": 3000,
+    "skipJsErrors": true
 }

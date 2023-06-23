@@ -1,6 +1,7 @@
 {
   "scripts": {
-    "test": "testcafe chrome src/index2.js"
+    "test": "testcafe chrome src/index2.js",
+    "test1": "node test-runner.js"
   },
   "dependencies": {
     "node": "^20.2.0",

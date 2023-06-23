@@ -6,7 +6,8 @@ const workbook = XLSX.readFile('src/file.xlsx');
 const worksheet = workbook.Sheets[workbook.SheetNames[0]];
 var data = XLSX.utils.sheet_to_json(worksheet, { header: 1 }).flat();
 data.shift();
-data = data.slice(700, 713);
+
+data = data.slice(500, 750);
 const length = data.length;
 
 
@@ -77,7 +78,7 @@ data.forEach((item, index) => {
             const resultSheet = XLSX.utils.aoa_to_sheet(Object.entries(result));
             const resultBook = XLSX.utils.book_new();
             XLSX.utils.book_append_sheet(resultBook, resultSheet, 'Sheet1');
-            XLSX.writeFile(resultBook, 'output1.xlsx');
+            XLSX.writeFile(resultBook, '500-750.xlsx');
         }
         const endTime = new Date()
         console.log((index+1) +'/'+ length + ' = ' + ((index+1)/length*100).toFixed(2) + '%' + ' ' + ((endTime - startTime) / 1000) + 'сек' );
