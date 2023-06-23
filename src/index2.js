@@ -2,7 +2,7 @@ import { Selector, test, t, ClientFunction } from 'testcafe';
 const XLSX = require('xlsx');
 
 //Read xlsx file
-const workbook = XLSX.readFile('file.xlsx');
+const workbook = XLSX.readFile('src/file.xlsx');
 const worksheet = workbook.Sheets[workbook.SheetNames[0]];
 var data = XLSX.utils.sheet_to_json(worksheet, { header: 1 }).flat();
 data.shift();
