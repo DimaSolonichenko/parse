@@ -72,7 +72,7 @@ data.forEach((item, index) => {
         
     })
     .after(async t => {
-        if(index%5 == 0)
+        if(index%50 == 0)
         {
             const resultSheet = XLSX.utils.aoa_to_sheet(Object.entries(result));
             const resultBook = XLSX.utils.book_new();
